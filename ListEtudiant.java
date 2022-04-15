@@ -1,11 +1,5 @@
 import java.util.ArrayList;
 
-interface Condition {
-    public boolean estVrai(Etudiant e){
-        
-    }
-}
-
 public class ListEtudiant extends ArrayList<Etudiant> {
 
     @Override
