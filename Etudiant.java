@@ -1,5 +1,5 @@
 public class Etudiant implements Comparable<Etudiant> {
-    private int id;
+    private  int id;
     private String name;
     private double note;
 
@@ -10,17 +10,18 @@ public class Etudiant implements Comparable<Etudiant> {
     public String toString() {
         return "Vnom:" + name + "Vnote:" + note;
     }
-
+ public void setNote(double note) {
+     this.note = note;
+ }
 @Override
 	public boolean equals(Object obj) {
 		if( ! (obj instanceof Etudiant) )  return false;
-		return ((Etudiant)obj).id==this.id;
+		return Etudiant.id==this.id;
     }
 
     @Override
 			public int compareTo(Etudiant E) {
-				if(E.note>this.note) { return 0;}
-				if(E.note==this.note) { return 1;}
-				else{return -1;}
+                return Double.compare(this.note, E.note);
 			}
 }
+
